@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Silkscreen", sans-serif;
+}
+body {
+  background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+nav {
+  display: flex;
+  gap: 50px;
+}
+.e1 , .e2 {
+  background: wheat;
+  height: 70px;
+  width: 50px;
+  border-radius: 30px 30px 0px 0px;
+}
+
+.head {
+  width: 550px;
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  padding: .5rem;
+  border-radius: 5px;
+  box-shadow: 7px 10px 3px;
+
+}
+.head .picture {
+  margin: auto;
+  width: 530px;
+  height: 250px;
+  background-color: #131A24;
+  border-radius: 5px;
+  position: relative;
+}
+.head .picture .continue {
+  border-radius: 5px;
+  background-color: grey;
+  position: absolute;
+  width: 95%;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid black;
+}
+/* ------  */
+input {
+  display: none;
+}
+input:checked ~ .body {
+  /* display: block; */
+  opacity: 1;
+  height: 400px;
+}
+input:checked ~ .open1::after {
+  transform: rotate(90deg);
+}
+/* ------  */
+.open1 {
+  background-color: white;
+  border-radius: 5px;
+  text-align: right;
+  padding-right: .5em;
+  font-size: 1.3em;
+}
+.open1::after {
+  content: ">";
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.body {
+  /* display: none; */
+  opacity: 0;
+  margin: auto;
+  width: 530px;
+  height: 0px;
+  background-color: #131A24;
+  border-radius: 5px;
+  transition: height 0.5s ease, opacity 0.5s ease;
+}
