@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: "Silkscreen", sans-serif;
 }
-a {
+a, a:visited, a:active {
   text-decoration: none;
   color: wheat;
 }
