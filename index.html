@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UIB Project</title>
-  <link rel="stylesheet" href="src/style.css">
-</head>
-<body>
-  <nav>
-    <div class="e1"></div>
-    <div class="e2"></div>
-  </nav>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>UIB Project</title>
+    <script src="https://kit.fontawesome.com/cfb8d0f0ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style.css"/>
+  </head>
+  <body>
+    <nav>
+      <div class="e1"></div>
+      <div class="e2"></div>
+    </nav>
 
-  <div class="head">
-    <div class="picture">
-      <div class="continue">
-        <h2>continue?</h2>
-        <p>yes</p>
-        <p>no</p>
+    <div class="body">
+      <div class="picture">
+        <div class="continue">
+          <h2>continue?</h2>
+          <label for="open1" class="open1">Yes</label>
+          <p>no</p>
+        </div>
+      </div>
+      <input type="checkbox" id="open1" />
+      <div class="info">
+        <div class="infowrapper">
+          <div class="gap gap-1">
+            <h2>>majorbnuy</h2>
+            <p>Welcome, nice to meet you...</p>
+          </div>
+          <div class="gap gap-2">
+            <h3>Trending</h3>
+            <button><i class="fa-brands fa-twitter"></i></button>
+            <button><i class="fa-brands fa-instagram"></i></button>
+            <button><i class="fa-brands fa-pinterest"></i></button>
+          </div>
+          <div class="gap gap-3">3</div>
+          <div class="gap gap-4">
+            <label for="UID">User ID</label>
+            <input
+              type="text"
+              name="UIB"
+              id="UID"
+              placeholder="000-111-100-1010"
+            />
+            <label for="pw">Passwort</label>
+            <input
+              type="password"
+              name="pw"
+              id="pw"
+              placeholder="************"
+            />
+          </div>
+          <div class="gap gap-5">5</div>
+          <div class="gap gap-6">
+            <h3>Profile</h3>
+            <p>majorbnuy</p>
+            <p>Junior Dev / Artist</p>
+            <p>Germany</p>
+          </div>
+          <div class="gap gap-7">7</div>
+        </div>
       </div>
     </div>
-      <input type="checkbox" id="open1">
-      <label for="open1" class="open1"></label>
-      <div class="body">
-        <p>yoink</p>
-    </div>
-
-
-  </div>
-  
-  
-</body>
+  </body>
 </html>
