@@ -15,6 +15,8 @@
 
     <div class="body">
       <div class="picture">
+        <img src="src/images/moon.gif" alt="moon" class="moon">
+        <img src="src/images/bunnyback.gif" alt="bunnybackpic" class="bunnyback">
         <div class="continue">
           <h2>continue?</h2>
           <label for="open1" class="open1">Yes</label>
@@ -22,43 +24,51 @@
         </div>
       </div>
       <input type="checkbox" id="open1" />
+
       <div class="info">
         <div class="infowrapper">
-          <div class="gap gap-1">
-            <h2>>majorbnuy</h2>
+          <div class="grid grid-1">
+            <h2>* majorbnuy:</h2>
             <p>Welcome, nice to meet you...</p>
           </div>
-          <div class="gap gap-2">
-            <h3>Trending</h3>
-            <button><i class="fa-brands fa-twitter"></i></button>
-            <button><i class="fa-brands fa-instagram"></i></button>
-            <button><i class="fa-brands fa-pinterest"></i></button>
+          <div class="grid grid-2">
+            <h3>Sozial Media</h3>
+            <div class="sozialmedia">
+              <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://de.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
           </div>
-          <div class="gap gap-3">3</div>
-          <div class="gap gap-4">
-            <label for="UID">User ID</label>
-            <input
-              type="text"
-              name="UIB"
-              id="UID"
-              placeholder="000-111-100-1010"
-            />
-            <label for="pw">Passwort</label>
-            <input
-              type="password"
-              name="pw"
-              id="pw"
-              placeholder="************"
-            />
+          <div class="grid grid-3"><img src="src/images/bunny.gif" alt="Bunnypic" class="bunnypic"></div>
+          <div class="grid grid-4">
+            <form action="#">
+              <label for="UID">User ID</label>
+              <input
+                type="text"
+                name="UIB"
+                id="UID"
+                placeholder="000-111-100-1010"
+              />
+              <label for="pw">Passwort</label>
+              <input
+                type="password"
+                name="pw"
+                id="pw"
+                placeholder="************"
+              />
+            </form>
           </div>
-          <div class="gap gap-5">5</div>
-          <div class="gap gap-6">
+          <div class="grid grid-5"><img src="src/images/star.gif" alt="" class="star"></div>
+          <div class="grid grid-6">
             <h3>Profile</h3>
-            <p>majorbnuy</p>
-            <p>Junior Dev / Artist</p>
-            <p>Germany</p>
+            <ul>
+              <li>Name: <span>Jack</span></li>
+              <li>Date: <span>03.07</span></li>
+              <li>Country: <span>Ger</span></li>
+            </ul>
+            <p>Artist / Jr. Developer</p>
           </div>
-          <div class="gap gap-7">7</div>
+          <div class="grid grid-7">7</div>
         </div>
       </div>
     </div>
