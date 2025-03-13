@@ -307,8 +307,31 @@ input:checked ~ .info {
   .body {
     width: 350px;
   }
+  .header {
+    margin: auto;
+    width: 100%;
+    height: 200px;
+  }
   input:checked ~ .info {
     opacity: 1;
     height: 450px;
+  }
+  .grid-6 ul {
+    width: 90%;
+  }
+  .grid-6 ul li {
+    display: flex;
+    justify-content: space-between;
+  }
+  .grid-6 ul li span::before {
+    content: "";
+  }
+  .grid-6 p {
+    margin: auto;
+    text-align: center;
+    font-size: .6rem;
+    background-color: black;
+    padding: .3em .5em;
+    border-radius: 5px;
   }
 }
