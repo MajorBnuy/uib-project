@@ -18,6 +18,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+/* -----Navigation-----  */
 nav {
   display: flex;
   gap: 50px;
@@ -28,6 +29,10 @@ nav {
   width: 60px;
   border-radius: 30px 30px 0px 0px;
 }
+.e2 {
+  background: #847C6C;
+}
+/* -----Body-----  */
 
 .body {
   width: 550px;
@@ -40,8 +45,9 @@ nav {
   box-shadow: 7px 10px 3px;
 
 }
+/* -----Header-----  */
+
 .header {
-  margin: auto;
   width: 100%;
   height: 250px;
   background: url(images/sterne.gif);
@@ -67,22 +73,21 @@ nav {
   flex-direction: row;
   color: wheat;
   padding: 5px 20px;
+  border: 2px solid black;
   border-radius: 5px;
-  background-color: rgba(77, 69, 85, 0.5);
+  background-color: #4d455580;
   backdrop-filter: blur(10px);
-  position: absolute;
   width: 95%;
+  position: absolute;
   bottom: 5px;
   left: 50%;
   transform: translate(-50%);
-  border: 2px solid black;
 }
 .yn {
   display: flex;
   flex-direction: column;
   align-items:last baseline;
   font-size: 1.3em;
-  height: 100%;
   gap: 0.5em;
   width: 100%;
   margin: 0.3em;
@@ -92,7 +97,6 @@ nav {
 .yn p:hover {
   background-color: black;
   border-radius: 5px;
-
 }
 .open1:hover::before ,
 .yn p:hover::before {
@@ -101,21 +105,19 @@ nav {
   right: 50px;
 }
 
-/* ------  */
+/* -----Open-----  */
+
 #open1 {
   display: none;
 }
 input:checked ~ .info {
-  opacity: 1;
-  height: 400px;
+  display: block;
 }
-/* ------  */
+/* -----Info-----  */
 
 .info {
-  opacity: 0;
-  margin: auto;
-  width: 100%;
-  height: 0px;
+  display: none;
+  height: 400px;
   background-color: #131A24;
   border-radius: 5px;
   transition: height 0.5s ease, opacity 0.4s ease-out;
@@ -137,7 +139,7 @@ input:checked ~ .info {
 }
 .grid {
   color: wheat;
-  background-color: rgba(77, 69, 85, 0.5);
+  background-color: #4d455580;
   border-radius: 5px;
   border: 2px solid black;
 }
@@ -232,7 +234,7 @@ input:checked ~ .info {
 .star {
   animation: float 3s ease-in-out infinite;
   animation-delay: 1s;
-  background: radial-gradient(circle, rgba(245, 222, 179, 0.298) 0%, rgba(255, 255, 255, 0) 50%);
+  background: radial-gradient(circle, #f5deb34c 0%, #ffffff00 50%);
 }
 .grid-6 {
   grid-area: profile;
@@ -274,8 +276,10 @@ input:checked ~ .info {
   padding: 0.5rem;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .grid-7 .comtext {
+  overflow: hidden;
   white-space: nowrap;
   display: inline-block;
   animation: textband 10s linear infinite;
@@ -284,6 +288,7 @@ input:checked ~ .info {
 
 
 
+/* -----Antimation-----  */
 
 @keyframes textband {
   0% { transform: translateX(100%); }
@@ -295,6 +300,8 @@ input:checked ~ .info {
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0); }
 }
+
+/* -----Navigation-----  */
 
 @media screen and (max-width: 768px) {
   body {
