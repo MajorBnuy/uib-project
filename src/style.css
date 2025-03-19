@@ -401,6 +401,15 @@ nav {
   border-radius: 5px;
 }
 /* -----Seite No / Hase-----  */
+.no {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 .no a {
   color: wheat;
   font-size: 2rem;
