@@ -22,6 +22,7 @@ body {
 nav {
   display: flex;
   gap: 50px;
+  margin-bottom: -3px;
 }
 .e1 , .e2 {
   background: wheat;
@@ -30,7 +31,10 @@ nav {
   border-radius: 30px 30px 0px 0px;
 }
 .e2 {
-  background: #847C6C;
+  background: #aca18c;
+}
+.e1:hover, .e2:hover {
+  animation: wiggle 0.5s ease-in-out infinite;
 }
 /* -----Body-----  */
 
@@ -43,12 +47,12 @@ nav {
   padding: .5rem;
   border-radius: 5px;
   box-shadow: 7px 10px 3px;
+  z-index: 1;
 
 }
 /* -----Header-----  */
 
 .header {
-  width: 100%;
   height: 250px;
   background: url(images/sterne.gif);
   background-color: #131A24;
@@ -107,10 +111,10 @@ nav {
 
 /* -----Open-----  */
 
-#open1 {
+#open1, #like, #dislike {
   display: none;
 }
-input:checked ~ .info {
+#open1:checked ~ .info {
   display: block;
 }
 /* -----Info-----  */
@@ -284,24 +288,257 @@ input:checked ~ .info {
   display: inline-block;
   animation: textband 10s linear infinite;
 }
+/* -----SEITE 2 Banner-----  */
+.banner {
+  height: 100px;
+  background: url(images/sterne.gif) center;
+  background-color: #000000;
+  border-radius: 5px;
+  position: relative;
+}
+.banner .moon {
+  height: 50px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+/* -----Important-----  */
+.important {
+  background-color: #131A24;
+  border-radius: 5px;
+  padding: .5em;
+}
+.important .rules {
+  color: wheat;
+  padding: .5em 1em;
+  background-color: #4d455580;
+  border-radius: 5px;
+  border: 2px solid black;  
+  display: flex;
+  flex-direction: column;
+}
+.rules h2 {
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  align-self: center;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  width: 80%;
+  border-bottom: 2px solid black;
+}
+.rules p {
+  font-size: .8rem;
+  text-align: justify;
+}
+/* -----Open 2-----  */
+.likediv label,
+.dislikediv label {
+  background: black;
+  color: wheat;
+  display: block;
+  margin: .3em 0;
+  padding: 0 .3em;
+  font-size: 1.2em;
+  border: 2px solid black;
+  border-radius: 5px;
+  position: relative;
+}
+.likelabel::after,
+.dislikelabel::after {
+  content: ">";
+  transition: transform 0.3s ease;
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+}
+#like:checked + .likelabel::after,
+#dislike:checked + .dislikelabel::after {
+  transform: rotate(90deg);
+}
+#like:checked ~ .like,
+#dislike:checked ~ .dislike {
+  display: grid;
+}
+/* -----Like + Dislike-----  */
+.dislike {
+  display: none;
+}
+.like {
+  display: none;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 1fr 4fr;
+  padding: .5em;
+  gap: .5em;
+}
+.dislike {
+  display: none;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 4fr 1fr;
+  padding: .5em;
+  gap: .5em;
+}
+.like .stern,
+.dislike .stern {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 5px;
+  
+}
+.like .textlike,
+.dislike .textdislike {
+  padding: .5em;
+  font-size: .8rem;
+}
+.textlike span,
+.textdislike span {
+  background-color: black;
+  border-radius: 5px;
+}
+/* -----Seite No / Hase-----  */
+.no a {
+  color: wheat;
+  font-size: 2rem;
+  background-color: #4d455580;
+  border-radius: 5px;
+  padding: .5em;
+  border: 2px solid black;
+}
+.no a:hover {
+  background-color: black;
+}
+.hase {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  animation: move 2s linear infinite;
+  right:-50%
+}
+.hase div {
+  background-color: wheat;
+  position: absolute;
 
-
-
+}
+.hear1 {
+  top: 10px;
+  left: 20px;
+  width: 15px;
+  height: 25px;
+  border-radius: 50% 50% 0 0;
+}
+.hear2 {
+  top: 12px;
+  left: 40px;
+  width: 15px;
+  height: 25px;
+  border-radius: 50% 50% 0 0;
+}
+.hase .eye1 ,
+.hase .eye2 {
+  top: 45px;
+  left: 5px;
+  background: white;
+  border: 1px solid black;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.hase .eye2 {
+  top: 50px;
+  left: 35px;
+}
+.eye1 .p1,
+.eye2 .p2 {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.p1 {
+  animation: orbit 1s linear infinite;
+}
+.p2 {
+  animation: orbit 1s linear infinite;
+  animation-delay: .5s;
+}
+.hhead {
+  top: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 40px;
+}
+.hbody {
+  top: 60px;
+  left: 10px;
+  width: 90px;
+  height: 60px;
+  border-radius: 30px;
+}
+.hbun {
+  top: 50px;
+  left: 85px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.hleg1 {
+  top: 105px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
+.hleg2 {
+  top: 105px;
+  left: 70px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+}
 
 /* -----Antimation-----  */
+@keyframes wiggle {
+  0% {transform: translateX(0) rotate(0deg);}
+  25% {transform: translateX(-5px) rotate(-5deg);}
+  50% {transform: translateX(5px) rotate(5deg);}
+  75% {transform: translateX(-5px) rotate(-5deg);}
+  100% {transform: translateX(0) rotate(0deg);}
 
+}
 @keyframes textband {
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
-
 @keyframes float {
   0% { transform: translateY(0); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0); }
 }
+@keyframes move {
+  0% {top: 0; animation-timing-function: ease-in;}
+  16%, 48%, 78% {top: 190px; animation-timing-function: ease-out;}
+  32% {top: 50px; animation-timing-function: ease-in;}
+  62% {top: 100px; animation-timing-function: ease-in;}
+  90% {top: 150px; animation-timing-function: ease-in;}
+  100% {top: 190px; animation-timing-function: ease-out; right:50%}
+}
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(2px) rotate(0deg); }
+  25% { transform: rotate(90deg) translateX(2px) rotate(-90deg); }
+  50% { transform: rotate(180deg) translateX(2px) rotate(-180deg); }
+  75% { transform: rotate(270deg) translateX(2px) rotate(-270deg); }
+  100% { transform: rotate(360deg) translateX(2px) rotate(-360deg); }
+}
 
-/* -----Navigation-----  */
+
+
+/* -----Media-----  */
 
 @media screen and (max-width: 768px) {
   body {
@@ -340,5 +577,8 @@ input:checked ~ .info {
     background-color: black;
     padding: .3em .5em;
     border-radius: 5px;
+  }
+  .no {
+    margin: 5rem 0;
   }
 }

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="src/style.css"/>
   </head>
   <body>
+    <!-- -----Navigation----- -->
+
     <nav>
       <a href="index.html">
       <div class="e2"></div>
@@ -16,70 +18,43 @@
     </nav>
 
     <div class="body">
-      <!-- -----Header----- -->
-
-      <div class="header">
+      <!-- -----Banner----- -->
+      <div class="banner">
         <img src="src/images/moon.gif" alt="moon" class="moon">
-        <img src="src/images/bunnyback.gif" alt="bunnybackpic" class="bunnyback">
-        <div class="continue">
-          <h2>continue?</h2>
-          <div class="yn">
-            <label for="open1" class="open1">Yes</label>
-            <p><a href="no.html">no</a></p>
-          </div>
-        </div>
       </div>
-      <input type="checkbox" id="open1" />
-      <!-- -----Info----- -->
-      <div class="info">
-        <div class="infowrapper">
-          <div class="grid grid-1">
-            <div class="welcome">
-              <h2>Hey there!</h2>
-              <p>Welcome to my little corner of the internet. Here, you'll find my commissions, projects, and informations. Feel free to explore!</p>
-            </div>
-          </div>
-          <div class="grid grid-2">
-            <h3>Social Media</h3>
-            <div class="socialmedia">
-              <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-              <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://de.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest"></i></a>
-            </div>
-          </div>
-          <div class="grid grid-3"><img src="src/images/bunny.gif" alt="Bunnypic" class="bunnypic"></div>
-          <div class="grid grid-4">
-            <form action="#">
-              <label for="UID">User ID</label>
-              <input
-                type="text"
-                name="UIB"
-                id="UID"
-                placeholder="000-111-100-1010"
-              />
-              <label for="pw">Passwort</label>
-              <input
-                type="password"
-                name="pw"
-                id="pw"
-                placeholder="************"
-              />
-            </form>
-          </div>
-          <div class="grid grid-5"><img src="src/images/star.gif" alt="" class="star"></div>
-          <div class="grid grid-6">
-            <h3>Profile</h3>
-            <ul>
-              <li>Name: <span>Jack</span></li>
-              <li>Date: <span>03.07</span></li>
-              <li>Country: <span>Ger</span></li>
-            </ul>
-            <p>Artist / Jr.Developer</p>
-          </div>
-          <div class="grid grid-7">
-            <div class="comtext"> Commissions : Closed || Waitlist : Open || Status : Work in Progress</div>
-          </div>
+      <!-- -----Important----- -->
+      <div class="important">
+        <div class="rules">
+          <h2>Rules</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis explicabo quas at soluta cumque, quod officiis laborum ipsum quo fuga odit non provident, quidem similique?</p>
         </div>
+        <section class="likediv">
+          <input type="checkbox" id="like">
+          <label for="like" class="likelabel">Yes</label>
+          <div class="like">
+            <div class="stern"><img src="src/images/star.gif" alt="Stern" class="star"></div>
+            <div class=" grid textlike">
+              <p>
+                <span>First</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto eaque maiores sint unde dignissimos quos itaque quo modi. <br>
+                <span>Second</span> Iusto eaque maiores sint unde dignissimos quos itaque quo modi.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="dislikediv">
+          <input type="checkbox" id="dislike">
+          <label for="dislike" class="dislikelabel">No</label>
+          <div class="dislike">
+            <div class=" grid textdislike">
+              <p>
+                <span>First</span> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto eaque maiores sint unde dignissimos quos itaque quo modi. <br>
+                <span>Second</span> Iusto eaque maiores sint unde dignissimos quos itaque quo modi.
+              </p>
+            </div>
+            <div class="stern"><img src="src/images/moon.gif" alt="Stern" class="star"></div>
+          </div>
+        </section>
+
       </div>
     </div>
   </body>
