@@ -54,8 +54,7 @@ nav {
 
 .header {
   height: 250px;
-  background: url(images/sterne.gif);
-  background-color: #131A24;
+  background: url(images/sterne.gif), #131A24;
   border-radius: 5px;
   position: relative;
 }
@@ -74,7 +73,6 @@ nav {
 }
 .header .continue {
   display: flex;
-  flex-direction: row;
   color: wheat;
   padding: 5px 20px;
   border: 2px solid black;
@@ -90,7 +88,7 @@ nav {
 .yn {
   display: flex;
   flex-direction: column;
-  align-items:last baseline;
+  align-items: last baseline;
   font-size: 1.3em;
   gap: 0.5em;
   width: 100%;
@@ -111,7 +109,7 @@ nav {
 
 /* -----Open-----  */
 
-#open1, #like, #dislike {
+input[type="checkbox"] {
   display: none;
 }
 #open1:checked ~ .info {
@@ -124,13 +122,11 @@ nav {
   height: 400px;
   background-color: #131A24;
   border-radius: 5px;
-  transition: height 0.5s ease, opacity 0.4s ease-out;
 }
 .infowrapper {
   display: grid;
   padding: .5em;
   gap: .5em;
-  width: 100%;
   height: 100%;
   grid-template-columns: 2fr 1fr 2fr;
   grid-template-rows: 1fr 2fr 2fr 1fr;
@@ -303,6 +299,7 @@ nav {
   top: 10px;
   animation: float 3s ease-in-out infinite;
 }
+
 /* -----Important-----  */
 .important {
   background-color: #131A24;
@@ -333,8 +330,12 @@ nav {
   text-align: justify;
 }
 /* -----Open 2-----  */
-.likediv label,
-.dislikediv label {
+.important span {
+  background-color: black;
+  border-radius: 5px;
+}
+
+.important label {
   background: black;
   color: wheat;
   display: block;
@@ -345,8 +346,7 @@ nav {
   border-radius: 5px;
   position: relative;
 }
-.likelabel::after,
-.dislikelabel::after {
+.important label::after {
   content: ">";
   transition: transform 0.3s ease;
   display: inline-block;
@@ -381,24 +381,24 @@ nav {
   padding: .5em;
   gap: .5em;
 }
-.like .stern,
-.dislike .stern {
+.important .stern {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
   border-radius: 5px;
-  
 }
-.like .textlike,
-.dislike .textdislike {
-  padding: .5em;
+section p {
+  padding: 0 .5em;
   font-size: .8rem;
 }
-.textlike span,
-.textdislike span {
-  background-color: black;
-  border-radius: 5px;
+section span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 2em;
+  height: 2em;
+  margin: .3em 0;
 }
 /* -----Seite No / Hase-----  */
 .no {
@@ -431,7 +431,6 @@ nav {
 .hase div {
   background-color: wheat;
   position: absolute;
-
 }
 .hear1 {
   top: 10px;
@@ -512,13 +511,13 @@ nav {
 }
 
 /* -----Antimation-----  */
+
 @keyframes wiggle {
   0% {transform: translateX(0) rotate(0deg);}
   25% {transform: translateX(-5px) rotate(-5deg);}
   50% {transform: translateX(5px) rotate(5deg);}
   75% {transform: translateX(-5px) rotate(-5deg);}
   100% {transform: translateX(0) rotate(0deg);}
-
 }
 @keyframes textband {
   0% { transform: translateX(100%); }
@@ -544,8 +543,6 @@ nav {
   75% { transform: rotate(270deg) translateX(2px) rotate(-270deg); }
   100% { transform: rotate(360deg) translateX(2px) rotate(-360deg); }
 }
-
-
 
 /* -----Media-----  */
 
